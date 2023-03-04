@@ -1,0 +1,54 @@
+
+{% include 'menu.html'   %}
+
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet" />
+<title>Actualizar perfil</title>
+</head>
+
+
+
+
+
+<body style="background-image:url(/static/images/Gallery-design-sketch-name.png) ; 
+background-repeat: no-repeat;
+background-position: left;">
+    
+
+<div style="margin-left: 500px; margin-top: 10px; width: 500px; margin-bottom: 40px;" class="w-full  p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+    <form class="space-y-6"  method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <h5 class="text-xl font-medium text-gray-900 dark:text-white" style="color: rgb(20, 20, 42); text-align: center;">Actualizar Perfil 👀</h5>
+       
+        
+       
+        {% for form in formu %}
+        <div>
+            <label for="{{form.label}}"  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" style="color:rgb(51, 46, 46);">{{form.label}}</label>
+           {{form}}
+        </div>
+        {% endfor %}
+        <div class="flex items-start">
+            <div class="flex items-start">
+               
+                
+            </div>
+            <a  class="ml-auto text-sm text-blue-700 hover:underline dark:text-blue-500"></a>
+        </div>
+        <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Guardar</button>
+        
+    </form>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+</body>  
+<!-- 
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% for form in formu %}
+        <label for="">{{form.label}}</label>
+        <input type="{{form.field.widget.input_type}}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" >
+    {% endfor %}
+    <input type="submit" value="Guardar">
+</form> -->

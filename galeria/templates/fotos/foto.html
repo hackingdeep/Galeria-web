@@ -1,0 +1,63 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foto</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet" />
+</head>
+
+{% include 'menu.html'   %}
+
+<style>
+
+body {
+      position: relative;
+      margin: var(--header-height) 0 0 0;
+      padding: 0 1rem;
+      font-family: var(--body-font);
+      font-size: var(--normal-font-size);
+      transition: 0.5s;
+      background-image: url(/static/images/wo.jpg);
+      background-position: center;
+      background-size: contain;
+      
+      background-attachment: fixed;
+      
+    }
+    .contee{
+        margin: 100px auto;
+        width: 95%;
+        max-width: 600px;
+        
+    }
+
+    img{
+        width: 100%;
+        border-radius: 10px;
+
+    }
+   
+   
+</style> 
+
+<body>
+
+
+    <div class="contee">
+       <img class="imagen" src="{{fotos.imagen.url}}" alt="">
+    </div> 
+
+
+
+
+
+
+<script src="https://kit.fontawesome.com/2bbc43c7fe.js" crossorigin="anonymous"></script>
+</body>
+
+</html>   

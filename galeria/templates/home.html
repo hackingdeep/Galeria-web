@@ -1,0 +1,114 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'css/stilo.css' %}">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="hero">
+        <nav class="nav__hero" >
+            <div class="container nav__container">
+                <div class="logo">
+                    <img width="200px" class="logo__name"src="{% static 'images/Gallery-design-sketch-name.png' %}" alt="">
+                </div>
+                <div class="links">
+                    <a href="{% url 'home' %}" class="link">Inicio</a>
+                    <a href="#app" class="link">Sobre la app</a>
+                    <a href="#creador" class="link">Creador</a>
+                    <a href="{% url 'iniciar_sesion' %}" class="link">Iniciar sesión</a>
+                    <a href="#" onclick="redes()" class="link">Contacto</a>
+                </div>
+            </div>
+        </nav>
+
+
+        <section class="container hero__main">  
+            <div class="hero__textos">
+                <a href="{% url 'registro_usuario' %}" class="link link--active">Comenzar</a>
+               
+            </div>
+           
+        </section>
+    </header>
+
+    <main>
+       
+        <section  id="app" class="projects container">
+            <h2 class="subtitle centrar">¿Para que fue creada esta galeria de imagenes?<span class="point">.</span></h2>
+            <article class="container-bg">
+                <div class="card ancho">
+                    <div class="cards__text">
+                        <img  class="imagen-ga" src="{% static 'images/Gallery-design-sketch-name.png' %}" alt="">
+                        <p class="card__list">
+                            Esta galeria de imagenes fue creada para que los usuarios
+                             tengan un respaldo de sus imagenes en la web, ya que muchas veces tenemos muy poco
+                             espacio en nuestra galeria movil o cualquier otro dispositivo que almacene imagenes,
+                             esta aplicación por ahora solo puede guardar imagenes por que aun esta en <span style="color: rgb(6, 50, 131);">Versión beta</span>
+                             mas adelante se podra guardar videos y otros tipos de multimedias.  
+                        </p>
+                    </div>
+                </div>
+
+                </div>
+                
+            </article>
+        </section>
+        <section class="testimony">
+            <div class="container">
+                <h2 class="text-creador" id="creador"> Creador<span class="point">.</span></h2>
+                    <div class="testimony__card">
+                        <img src="{% static 'images/rhan.jpeg' %}" class="testimony__img">
+                        <div class="testimony__copy">
+                            <i class='bx bxl-python testimony_logo '></i>
+                            <div class="testimony__info">
+                                <h3 class="testimony__name">Mi nombre es Rhanzess Chávez y soy desarrollador web backend</h3>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </section>
+
+      
+    </main>
+
+    <footer class="footer">
+        
+
+        <div class="contact">
+            <div class="item__contact">
+                <i class='bx bx-copyright contact__icon' ></i>
+                <h3 class="contact__title">Rhanzess</h3>
+            </div>
+            <div class="item__contact">
+                <i class='bx bx-mail-send contact__icon' ></i>
+                <h3 class="contact__title">Rhanzess13@gmail.com</h3>
+            </div>
+            <div class="item__contact">
+                <i class='bx bxs-edit-location contact__icon' ></i>
+                <h3 class="contact__title">Juan palomino</h3>
+            </div>
+            <div class="item__contact item__contact--gold">
+                <i class='bx bxs-chat contact__icon contact__icon--modifier' ></i>
+                <h3 class="contact__title">Contactame 🤑</h3>
+            </div>
+        </div>
+    </footer>
+
+<script>
+        
+    function redes(){
+        alert("Contacto No disponible")
+    }
+</script>
+    
+</body>
+</html> 
